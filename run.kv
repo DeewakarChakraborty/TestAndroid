@@ -1,0 +1,25 @@
+<Main@BoxLayout>:
+    box: box_img
+    b_t: b_t
+    orientation: " vertical"
+    BoxLayout:
+        id: box_img
+        ii: '1.png'
+        canvas:
+            Rectangle:
+                source: self.ii
+                pos: root.pos
+                size: root.size
+    BoxLayout:
+        width: root.width
+        Button:
+            size_hint_x:1
+            pos: self.pos
+            text: 'Switch'
+            on_release: root.choose()
+        Label:
+            size_hint_x:9
+            id: b_t
+            ii: '123'
+            text: self.ii
+            haling: 0
